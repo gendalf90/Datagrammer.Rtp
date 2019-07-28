@@ -27,20 +27,6 @@ namespace Rtp.Protocol
             SourceIdentifier = sourceIdentifier;
             Sources = sources;
             Payload = payload;
-
-            //var first4Bytes = bytes.Slice(0, 4).Span;
-            //var firstInt32 = UnsafeBitConverter.ToInt32(first4Bytes);
-            //var first32Bits = new BitVector32(firstInt32);
-
-            //Version = first32Bits.GetInt32(0, 2);
-            //IsPadded = first32Bits.GetBit(2);
-            //HasHeaderExtension = first32Bits.GetBit(3);
-
-            //var CSRCCount = first32Bits.GetInt32(4, 4);
-
-            //IsMarker = first32Bits.GetBit(8);
-            //PayloadType = first32Bits.GetInt32(9, 7);
-
         }
 
         public int Version { get; }

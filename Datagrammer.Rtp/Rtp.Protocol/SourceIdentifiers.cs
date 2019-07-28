@@ -6,7 +6,7 @@ namespace Rtp.Protocol
     {
         private readonly ReadOnlyMemory<byte> bytes;
 
-        public SourceIdentifiers(ReadOnlyMemory<byte> bytes, int count)
+        internal SourceIdentifiers(ReadOnlyMemory<byte> bytes, int count)
         {
             this.bytes = bytes;
 

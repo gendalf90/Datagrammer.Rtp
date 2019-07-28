@@ -9,7 +9,7 @@ namespace Rtp.Protocol
         private int? currentSourceIdentifier;
         private ReadOnlyMemory<byte> remainsOfBytes;
 
-        public SourceIdentifierEnumerator(ReadOnlyMemory<byte> bytes)
+        internal SourceIdentifierEnumerator(ReadOnlyMemory<byte> bytes)
         {
             currentSourceIdentifier = null;
             remainsOfBytes = bytes;
