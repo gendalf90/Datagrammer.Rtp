@@ -2,7 +2,7 @@ using Xunit;
 using Rtp.Protocol;
 using System;
 
-namespace Tests
+namespace Tests.Unit
 {
     public class RtpMessageTests
     {

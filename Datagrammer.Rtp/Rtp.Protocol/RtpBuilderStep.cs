@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Threading;
 
 namespace Rtp.Protocol
 {
@@ -8,10 +7,6 @@ namespace Rtp.Protocol
         private const int CurrentVersion = 2;
         private const int MinLength = 12;
         private const int IdentifierLength = 4;
-
-        private static SpinLock spinlock = new SpinLock();
-
-        private static readonly Random random = new Random();
 
         private readonly RtpBuilderState state;
 
@@ -91,25 +86,7 @@ namespace Rtp.Protocol
 
         public RtpBuilderStep GenerateSourceIdentifier()
         {
-            return SetSourceIdentifier(GenerateNextInteger());
-        }
-
-        private int GenerateNextInteger()
-        {
-            bool lockTaken = false;
-
-            try
-            {
-                spinlock.Enter(ref lockTaken);
-                return random.Next();
-            }
-            finally
-            {
-                if (lockTaken)
-                {
-                    spinlock.Exit(false);
-                }
-            }
+            return SetSourceIdentifier(ThreadSafeRandom.Next());
         }
 
         public RtpBuilderStep SetPayload(ReadOnlyMemory<byte> bytes)

@@ -2,6 +2,13 @@
 
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
+    <Authors>Roman Boykov</Authors>
+    <Company>Roman Boykov</Company>
+    <Description>RTP support for Datagrammer</Description>
+    <PackageProjectUrl>https://github.com/gendalf90/Datagrammer</PackageProjectUrl>
+    <PackageTags>udp client datagram datagrammer rtp dataflow reactive rx observable</PackageTags>
+    <RepositoryUrl>https://github.com/gendalf90/Datagrammer.Rtp</RepositoryUrl>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
   </PropertyGroup>
 
   <ItemGroup>
