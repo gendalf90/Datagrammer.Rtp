@@ -9,14 +9,13 @@
     <PackageTags>udp client datagram datagrammer rtp dataflow reactive rx observable</PackageTags>
     <RepositoryUrl>https://github.com/gendalf90/Datagrammer.Rtp</RepositoryUrl>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <LangVersion>latest</LangVersion>
   </PropertyGroup>
 
   <ItemGroup>
     <PackageReference Include="Datagrammer" Version="5.0.0" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <ProjectReference Include="..\Rtp.Protocol\Rtp.Protocol.csproj" />
+    <PackageReference Include="System.Memory" Version="4.5.3" />
+    <PackageReference Include="System.Runtime.CompilerServices.Unsafe" Version="4.5.2" />
   </ItemGroup>
 
 </Project>

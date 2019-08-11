@@ -14,7 +14,6 @@
 
   <ItemGroup>
     <ProjectReference Include="..\Datagrammer.Rtp\Datagrammer.Rtp.csproj" />
-    <ProjectReference Include="..\Rtp.Protocol\Rtp.Protocol.csproj" />
   </ItemGroup>
 
 </Project>
